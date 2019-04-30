@@ -4,13 +4,13 @@ Generating [DingTalk] notification from [Prometheus] [AlertManager] WebHooks
 ### Running
 
 ```bash
-python dingding-hook.py <flags>
+python webhook-dingtalk.py <flags>
 ```
 
 ## Usage
 
 ```
-usage: dingding-hook.py --ding.profile=DING.PROFILE [<flags>]
+usage: webhook-dingtalk.py --ding.profile=DING.PROFILE [<flags>]
 
 Flags:
   -h, --help              Show context-sensitive help (also try --help-long and --help-man).
@@ -25,8 +25,8 @@ Flags:
 
 
 ```
-python dingding-hook.py --ding_profile="webhook1=https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxx"  --listen_address=8060 --filter_lables=job --filter_lables=instance
-python dingding-hook.py --ding_profile="webhook1=https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxx,webhook2=https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxx"  --listen_address=8060 --filter_lables=job --filter_lables=instance
+python webhook-dingtalk.py --ding_profile="webhook1=https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxx"  --listen_address=8060 --filter_lables=job --filter_lables=instance
+python webhook-dingtalk.py --ding_profile="webhook1=https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxx,webhook2=https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxx"  --listen_address=8060 --filter_lables=job --filter_lables=instance
 ```
 
 ## Prometheus Example
