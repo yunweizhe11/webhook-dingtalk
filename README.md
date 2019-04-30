@@ -50,3 +50,14 @@ receivers:
   - send_resolved: false
     url: 'http://localhost:8060/dingtalk/webhook1/send'
 ```
+
+## dingtalk Example
+
+```
+告警名称: alert_name
+当前状态: alert_status
+当前级别: alert_severity
+告警主题: summary
+告警详情: description
+触发时间: 2019-04-30 10:51:09
+```

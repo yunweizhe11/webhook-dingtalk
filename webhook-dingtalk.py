@@ -23,7 +23,6 @@ def send(webhook):
 
 
 def format_to_template(data):
-    #result = {}
     count = 0 
     code = 0
     if len(data['alerts']) == 1:
@@ -105,6 +104,5 @@ if __name__ == '__main__':
     for i in result.split(','):
         global_webhook[i.split('=',1)[0]] = i.split('=',1)[1]
     if isinstance(filter_labels,list):
-        print filter_labels,default_lables
         default_lables = list(set(filter_labels) | set(default_lables))
     app.run(host='0.0.0.0', port=port)
