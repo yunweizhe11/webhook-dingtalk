@@ -26,6 +26,7 @@ Flags:
 
 ```
 python dingding-hook.py --ding_profile="webhook1=https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxx"  --listen_address=8060 --filter_lables=job --filter_lables=instance
+python dingding-hook.py --ding_profile="webhook1=https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxx,webhook2=https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxx"  --listen_address=8060 --filter_lables=job --filter_lables=instance
 ```
 
 ## Prometheus Example
@@ -39,4 +40,13 @@ python dingding-hook.py --ding_profile="webhook1=https://oapi.dingtalk.com/robot
     annotations:
       summary: alert_title
       description: alert_details
+```
+## ALertManager Example
+
+```
+receivers:
+- name: 'dingtalk'
+  webhook_configs:
+  - send_resolved: false
+    url: 'http://localhost:8060/dingtalk/webhook1/send'
 ```
