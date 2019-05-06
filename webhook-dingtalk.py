@@ -38,7 +38,7 @@ def assembly(data,count=0):
     code = 0
     if data['alerts'][count].get('status',None) == 'firing':
         status = u"告警"
-    elif data['alerts'][count].get('status',None) == 'Resolved':
+    elif data['alerts'][count].get('status',None) == 'resolved':
         status = u"恢复"
         code = 1
     else:
